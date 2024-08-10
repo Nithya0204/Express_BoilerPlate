@@ -1,24 +1,25 @@
-Problem Statement!!
+You need to create a RESTful API for managing a contact list. The API should handle the following CRUD functionalities:
 
-"To-Do List" API.
+1. Create a Contact
+    Endpoint: POST /contacts
+    Request Body: { "name": "John Doe", "email": "john.doe@example.com", "phone": "123-456-7890" }
+    Response: { "id": "1", "name": "John Doe", "email": "john.doe@example.com", "phone": "123-456-7890" }
 
-Build a RESTful API for managing a to-do list using Node.js and Express. The API should allow users to create, retrieve, update, and delete to-do items.
+2. Read Contacts
+    Get All Contacts:
+    Endpoint: GET /contacts
+    Response: [ { "id": "1", "name": "John Doe", "email": "john.doe@example.com", "phone": "123-456-7890" }, ... ]
 
-Requirements:
-1.	Create a To-Do Item :
-    ○	Endpoint: POST /todo
-    ○	Request Body: { "title": "string", "completed": "boolean" }
-    ○	Response: The newly created to-do item with a unique ID.
-2.	Retrieve All To-Do Items:
-    ○	Endpoint: GET /todos
-    ○	Response: An array of all to-do items.
-3.	Retrieve a Single To-Do Item by ID:
-    ○	Endpoint: GET /todos/:id
-    ○	Response: The to-do item with the specified ID.
-4.	Update a To-Do Item by ID:
-    ○	Endpoint: PUT /todos/:id
-    ○	Request Body: { "title": "string", "completed": "boolean" }
-    ○	Response: The updated to-do item.
-5.	Delete a To-Do Item by ID:
-    ○	Endpoint: DELETE /todos/:id
-    ○	Response: A message indicating success or failure.
+3. Get a Single Contact:
+    Endpoint: GET /contacts/:id
+    Response: { "id": "1", "name": "John Doe", "email": "john.doe@example.com", "phone": "123-456-7890" }
+
+4. Update a Contact
+    Endpoint: PUT /contacts/:id
+    Request Body: { "name": "John Smith", "email": "john.smith@example.com", "phone": "098-765-4321" }
+    Response: { "id": "1", "name": "John Smith", "email": "john.smith@example.com", "phone": "098-765-4321" }
+    
+5. Delete a Contact
+    Endpoint: DELETE /contacts/:id
+    Response: { "message": "Contact deleted successfully" }
+ 
